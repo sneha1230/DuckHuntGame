@@ -38,4 +38,5 @@ public class MenuController : MonoBehaviour
         middlePanel.SetActive(true);
         bottomPanel.SetActive(true);
     }
+    
 }
