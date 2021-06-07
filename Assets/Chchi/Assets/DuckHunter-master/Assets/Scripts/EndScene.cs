@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class EndScene : MonoBehaviour
 {
+   //public Timer time;
+
+   
+
      public void GoToNextScene()
     {
-        SceneManager.LoadScene(1);
+            SceneManager.LoadScene(1);
     }
     public void GoToNextScene1()
     {

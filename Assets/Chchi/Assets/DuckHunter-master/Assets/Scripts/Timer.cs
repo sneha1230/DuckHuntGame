@@ -6,39 +6,25 @@ using System.Collections.Generic;
 
 public class Timer : MonoBehaviour
 {
-    public GameObject TimerText;
-    public int secondsLeft = 30;
-    public bool takingAway = false;
+    public float timeLeft = 5.0f;
 
-    void Start()
-    {
-        TimerText.GetComponent<Text>().text = "00:" + secondsLeft;
-    }
+    public Text startText;
 
-    private void Update()
+    void Update()
     {
-        if(takingAway == false && secondsLeft > 0)
+        timeLeft -= Time.deltaTime;
+
+        startText.text = (timeLeft).ToString("0");
+
+        if(timeLeft <= 0)
         {
-            StartCoroutine(TimerTake());
+
+        timeLeft = 0f;
+        SceneManager.LoadScene(3);
+
         }
+
+        
     }
-    IEnumerator TimerTake()
-    {
-        takingAway = true;
-        yield return new WaitForSeconds(1);
-        secondsLeft -= 1;
-        if (secondsLeft < 10)
-        {
-            TimerText.GetComponent<Text>().text = "00:0" + secondsLeft;
-        }
-        else if(secondsLeft > 10)
-        {
-            TimerText.GetComponent<Text>().text = "00:" + secondsLeft;
-        }
-        else if(secondsLeft == 0)
-        {
-            SceneManager.LoadScene(2);
-        }
-        takingAway = false;
-    }
+    
 }

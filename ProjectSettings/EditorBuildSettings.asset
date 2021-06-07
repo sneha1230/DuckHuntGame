@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Chchi/Assets/Scenes/GameScene.unity
+    path: Assets/Scenes/GameScene.unity
     guid: 402b183336c351f45b488ff0d88a535f
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: aa956de4727368947ad88082b8d43cd4
+  - enabled: 1
+    path: Assets/Scenes/LostScene.unity
+    guid: c4fdaf5043b229547ba868a0816e99b4
   m_configObjects: {}
